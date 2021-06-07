@@ -32,7 +32,28 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
+
+        addInt()
     }
+
+    private fun addInt () {
+
+        var intA: Int = 10
+        var intB: Int = 20
+        var intC: Int = 0
+
+        for (i in 0 until 5) {
+
+            intC = when (i) {
+
+                0 -> intA+intB+i
+                else -> intA+intC+i
+            }
+
+            println("Value of C = $intC")
+        }
+    }
+
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
